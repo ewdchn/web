@@ -1,0 +1,184 @@
+<html>
+	<head>
+		<title>Javascript exercise</title>
+		<style>
+			body{background-color:LightGrey;color:#333333;}
+			div{
+			background-color:floralwhite;
+			border-style:solid;
+			border-width:1px;border-color:grey;
+			padding:20px;
+			margin-left:20px;margin-right:20px;
+			}
+			h1,h2,h3,h4{
+			color:black;
+			}
+		</style>
+		<script>
+			function  buttonfunc(){
+				var y = document.getElementById("input").value;
+				alert(y);
+			}
+			function changetext(){
+				x=document.getElementById("text0");
+				if(x.innerHTML.match("click again"))
+				{
+					x.style.color="red";
+					x.innerHTML="click";
+				}
+				else
+				{
+					x.style.color="blue";
+					x.innerHTML="click again";
+				}
+			}
+		</script>
+	</head>
+	<body onload="checkCookies()">
+		<div>
+			<script>
+				document.write("<h1>script generated heading</h1>");
+				document.write("<p>This is a paragraph</p>");
+			</script>
+			<p onclick="alert('fuck')"> <b>document.write</b> does not work here</p>
+			<h1> script button</h1>
+			<button type="button" onclick="alert('Welcome!')"> text </button>
+			<h1> Change Content</h1>
+			<p id="text0" onclick="changetext()">click</p>
+			<input id="input" type="text">
+			
+			<button type="button" onclick="buttonfunc()">click me</button>
+		</div>
+		<div>
+			<script>
+				function calc(){
+					tag=document.getElementById("calc");
+					a=5;b=2;c=a+b;
+					tag.innerHTML=c;
+				}
+				function show(){
+					if(tag.innerHTML==c){
+						tag.innerHTML="global";
+					}
+					else{tag.innerHTML=c;}
+				}
+			</script>
+			<h1> global variables calculation</h1>
+			<p id="calc">calculates</p>
+			<button type="button" onclick="calc()">calc</button>
+			<button type="button" onclick="show()">show</button>			
+		</div>
+		<div>
+			<h1>try throw catch</h1>
+			<script>
+				function ttc(){
+					try{adddler("");}
+					catch(err){
+						alert(err.message);
+					}
+				}
+			</script>
+			<button type="button" onclick="ttc()">try it</button><br>
+			<script>
+				function emptystr(){
+					try{
+						txtfld=document.getElementById("ttcemp");
+						if(txtfld.value=="")throw "empty";
+					}
+					catch(err){
+						alert(err);
+					}
+				}
+			</script>
+			<input type="text" id="ttcemp">
+			<button type="button" onclick="emptystr()">empty?</button>
+		</div>
+		<div>
+			<h1>DOM tree tag, id</h1>
+			<div id="main">
+				<p>the DOM is useful</p>
+				<script>
+					var x = document.getElementById("main");
+					var y = x.getElementsByTagName("p");
+					document.write("1st paragraph :"+y[0].innerHTML);
+				</script>
+			</div>
+		</div>
+		<div>
+			<h1>Dynamic Content</h1>
+			<script>
+				document.write(Date());
+			</script>
+		</div>
+		<div>
+			<h1> onload/onunload function</h1>
+			<script>
+				function checkCookies(){
+					if(navigator.cookieEnabled==true){
+						alert("cookie enabled");
+					}
+					else{
+						alert("cookie not enabled");
+					}
+				}
+			</script>	
+		</div>
+		<div>
+			<script>
+				function funcChng(){
+					var k=document.getElementById("fname");
+					k.value=k.value.toUpperCase();
+				}
+			</script>
+			<h1>onchange</h1>
+			<input type="text" id="fname" onchange="funcChng()">	
+		</div>
+		<div>
+			<script>
+				function mOver(obj){
+					obj.innerHTML="TT";
+				}
+				function mOut(obj){
+					obj.innerHTML="Over me";
+				}
+			</script>
+			<h1>onmouseover/onmouseout</h1>
+			<div onmouseover="mOver(this)" onmouseout="mOut(this)" \
+			style="border-width:0px;background-color:#D94A38;width:120px;height20px;padding;40px">Over me</div>			
+		</div>
+		<div>
+			<script>
+				function mDown(obj){
+					obj.innerHTML="mouseDown";
+					obj.style.backgroundColor="#1ec5e5";
+				}
+				function mUp(obj){
+					obj.innerHTML="mouseUp";
+					obj.style.backgroundColor="#D94A38";
+				}
+			</script>
+			<h1>onmousedown/onmouseup</h1>
+			<div onmousedown="mDown(this)" onmouseup="mUp(this)" \
+			style="border-width:0px;background-color:#D94A38;width:120px;height20px;padding;40px">Mouse up</div>					
+			<h1 onmouseover="style.color='red'" onmouseout="style.color='black'">over</h1>
+		</div>
+		<div>
+			<h1>onfocus</h1>
+			<input type="text" onfocus="this.style.background='yellow';">
+		</div>
+		<div>
+			<h1>HTML DOM nodes(elements)</h1>
+			<div id="div1">
+				<h2>appending</h2>
+				<script>
+					var para=document.createElement("p");
+					var node=document.createTextNode("new para");
+					para.appendChild(node);
+					var element = document.getElementById("div1");
+					element.appendChild(node);
+					</script>
+				</div>
+			</div>
+			
+	</body>
+</html>
