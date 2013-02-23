@@ -1,29 +1,83 @@
 <!DOCTYPE html>
 <html>
-<body style="font-family:tahoma;">
-
-<div id="container" style="width:100%">
-
-	<div id="header" style="background-color:#FFA500;">
-	<h1 style="margin-bottom:0;">Main Title of Web Page</h1>
-	</div>
-
-	<div id="menu" style="background-color:#FFD700;height:200px;width:10%;max-width:100px;float:left;">
-	<b>Menu</b><br>
-	HTML<br>
-	CSS<br>
-	JavaScript
-	</div>
-
-	<div id="content" style="background-color:#EEEEEE;height:200px;width:90%;float:left;">
-	<p>Content goes here</p>
-	</div>
-
-	<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
-	<p>Copyright © W3Schools.com</p>
-	</div>
-
-</div>
- 
-</body>
+	<head>
+		<meta name="generator"
+		content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+		<style>
+			div.container
+			{
+			width:100%;
+			margin:0px;
+			border:1px solid gray;
+			line-height:150%;
+			}
+			div.header,div.footer
+			{
+			padding:0.5em;
+			color:white;
+			background-color:gray;
+			clear:left;
+			}
+			h1.header
+			{
+			padding:0;
+			margin:0;
+			}
+			div.left
+			{
+			float:left;
+			width:160px;
+			margin:0;
+			padding:1em;
+			}
+			div.content
+			{
+			margin-left:190px;
+			border-left:1px solid gray;
+			padding:1em;
+			}
+			p.con:first-letter{
+				font-size:x-large;
+			}
+			ul{
+				overflow:hidden;
+			}
+			li{
+				display:block;
+				float:left;
+				width:50px;
+				padding-left:10px;
+			}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div class="navibar">
+		<ul>
+		<li>about</li>
+		<li>readme</li>
+		<li>RSS</li>
+		</ul>
+		</div>
+		<div class="container">
+			<div class="header">
+				<h1 class="header">W3Schools.com</h1>
+			</div>
+			<div class="left">
+				<p>&quot;Never increase, beyond what is necessary, the number of entities required to explain anything.&quot; William of
+				Ockham (1285-1349)</p>
+			</div>
+			<div class="content">
+				<h2>Free Web Building Tutorials</h2>
+				<p class="con">First-letter pseudo element.</p>
+				<p>Display:inline --> no word wrap</p>
+				<p>Display:block --> word wrap</p>
+				<p>W3Schools - The Largest Web Developers Site On The Net!</p>
+			</div>		
+			<div class="footer">Copyright 1999-2005 by Refsnes Data.</div>
+		</div>
+		<div>
+			
+		</div>
+	</body>
 </html>
