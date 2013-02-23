@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		ul#display-inline-block-example,
+		ul#display-inline-block-example li{
+			margin: 0;
+			padding: 0;
+			
+		}
+		ul#display-inline-block-example li{
+			display:inline-block;
+			width:100px;
+			min-height:15px;
+			background:#ccc;
+			text-align:center;
+			vertical-align:top;
+		}
+		ul#display-inline,
+		ul#display-inline li{
+			margin:0;
+			padding:0;
+		}
+		ul#display-inline li{
+			display:inline;
+			background:#ccc;
+		}
+		ul#display_block{
+			overflow:hidden;
+		}
+		ul#display_block,
+		ul#display_block li{
+			padding:0px;
+			margin:0px;
+		}
+		ul#display_block li{
+			display:block;
+			float:left;
+			width:100px;
+			background:#ccc;
+		}
+		</style>
+	</head>
+	
+	
+	<body>
+		<h1>In-line</h1>
+		<p> no force line break</p>
+		<p> but no equal width</p>
+		<ul id="display-inline">
+			<li>item one</li>
+			<li>item two</li>
+			<li>item three</li>
+		</ul>
+		<h1>Block</h1>
+		<p> force line break</p>
+				<ul id="display_block">
+			<li>item one</li>
+			<li>item two</li>
+			<li>item three</li>
+		</ul>
+		<h1>Inline-block</h1>
+		<ul id="display-inline-block-example">
+			<li>item one</li>
+						<li>item two</li>
+			<li>item three</li>
+
+			</ul>
+	</body>
+</html>
